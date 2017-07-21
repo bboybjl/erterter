@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+
+
+        }
+        body{
+            background: url("bg.jpg") no-repeat;
+            background-size: contain;
+        }
+        .nav{
+            width: 60px;
+            height: 50px;
+
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+        }
+
+        .bg{
+            background: url("menu.png") no-repeat;
+            background-size: contain;
+            width: 100%;
+            height: 200px;
+            position: absolute;
+            top: 50px;
+            display: none;
+
+        }
+        .bg li{
+
+            width: 100%;
+        }
+        @media screen and (min-width:370px) and (max-width: 400px) {
+            .bg li {
+                height: 35px;
+            }
+        }
+        @media screen and (min-width:400px) and (max-width: 500px) {
+            .bg li {
+                height: 37px;
+            }
+        }
+        .weixian{
+            width: 100%;
+            height: 200px;
+            background: url("手机版q1.png") center no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            display: none;
+        }
+        .map{
+            width: 100%;
+            height: 150px;
+            background: url("map1.png") no-repeat;
+            background-size: contain;
+            position: absolute;
+            bottom: 100px;
+            cursor: pointer;
+        }
+        .btn{
+            width: 70px;
+            height: 80px;
+            position: absolute;
+            top: 333px;
+            left: 10px;
+            cursor: pointer;
+        }
+        .btn div{
+            width: 90px;
+            height: 20px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .btn3{
+            position: relative;
+            top: -5px;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+</div>
+<div class="bg">
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<div class="weixian"></div>
+<div class="map"></div>
+<div class="btn">
+    <div class="btn1"></div>
+    <div class="btn2"></div>
+    <div class="btn3"></div>
+</div>
+</body>
+<script src="jquery-1.8.3.min.js">
+
+</script>
+<script>
+    $(function () {
+        $('.nav').click(function () {
+            $('.bg').toggle()
+        });
+        $('.map').click(function () {
+            $('.weixian').toggle()
+        })
+        $('li').eq(0).click(function () {
+            $('body').css({
+                'background':'url("bg11.jpg") no-repeat',
+                "background-size": "contain"
+            });;
+            $('.bg').hide();
+            $('.map').hide();
+        });
+        $('li').eq(1).click(function () {
+            $('body').css({
+                'background':'url("citydanger1.jpg") no-repeat',
+                "background-size": "contain"
+            });
+            $('.bg').hide();
+            $('.map').hide();
+        });
+        $('li').eq(2).click(function () {
+            $('body').css({
+                'background':'url("手机版3.jpg") no-repeat',
+                "background-size": "contain"
+            });
+            $('.bg').hide();
+            $('.map').hide();
+        });
+        $('li').eq(3).click(function () {
+            $('body').css({
+                'background':'url("手机版4.jpg") no-repeat',
+                "background-size": "contain"
+            });
+            $('.bg').hide();
+            $('.map').hide();
+        });
+        $('li').eq(4).click(function () {
+            $('body').css({
+                'background':'url("手机版5.jpg") no-repeat',
+                "background-size": "contain"
+            });
+            $('.bg').hide();
+            $('.map').hide();
+        })
+        $('.btn1').click(function () {
+            $('body').css({
+                'background':'url("citydanger1.jpg") no-repeat',
+                "background-size": "contain"
+            });
+            $('.bg').hide();
+            $('.map').hide();
+        });
+        $('.btn2').click(function () {
+            $('body').css({
+                'background':'url("citydanger2.jpg") no-repeat',
+                "background-size": "contain"
+            });
+            $('.bg').hide();
+            $('.map').hide();
+        });
+        $('.btn3').click(function () {
+            $('body').css({
+                'background':'url("citydanger3.jpg") no-repeat',
+                "background-size": "contain"
+            });
+            $('.bg').hide();
+            $('.map').hide();
+        })
+
+    })
+</script>
+</html>
